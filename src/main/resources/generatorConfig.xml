@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<context id="context1" targetRuntime="Mybatis3">
+  <!-- 数据库连接 -->
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/rbac?serverTimezone=Asia/Shanghai"
+     driverClass="com.mysql.cj.jdbc.Driver" password="123456" userId="root" />
+    
+    <!-- 生成实体类 -->
+    <javaModelGenerator targetPackage="com.woniu.pojo" targetProject="rbac" />
+    
+    <!-- 生成xml文件 -->
+    <sqlMapGenerator targetPackage="com.woniu.mapper" targetProject="rbac"></sqlMapGenerator>
+    
+    <!-- 生成mapper接口 -->
+    <javaClientGenerator targetPackage="com.woniu.mapper" targetProject="rbac" type="XMLMAPPER" />
+    <!-- 数据库与表名 -->
+    <table schema="rbac" tableName="permission"></table>
+    <table schema="rbac" tableName="rolePermission"></table>
+    <table schema="rbac" tableName="roles"></table>
+    <table schema="rbac" tableName="userRole"></table>
+    <table schema="rbac" tableName="useres"></table>
+  </context>
+</generatorConfiguration>
