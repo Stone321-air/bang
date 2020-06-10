@@ -68,8 +68,10 @@
     				dataType:"json",
     				success:function(result){
     					if(result.msg == "OK"){
-    						layer.msg("登录成功", {time:2000, icon:6, shift:6}, function(){});
-    						location.href = "main.jsp";
+    						layer.msg("登录成功", {time:2000, icon:6, shift:6}, function(){
+    							location.href = "main.jsp";
+    						});
+    						
     					}else{
     						layer.msg("登录失败", {time:1500, icon:5, shift:6}, function(){});
     					}

@@ -3,6 +3,8 @@ package com.woniu.mapper;
 import com.woniu.pojo.Userrole;
 import com.woniu.pojo.UserroleExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface UserroleMapper {
@@ -93,4 +95,10 @@ public interface UserroleMapper {
      * @mbg.generated Mon Jun 08 19:20:02 GMT+08:00 2020
      */
     int updateByPrimaryKey(Userrole record);
+    
+    /**
+     * 批量新增
+     * @param paramterMap
+     */
+	void saveSome(Map<String, Object> paramterMap);
 }

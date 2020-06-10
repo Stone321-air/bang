@@ -18,5 +18,6 @@ public interface UseresService {
 	void save(Useres user);
 	
 	void delChoice(Integer[] uids);
-
+	
+	void update(Useres user);
 }

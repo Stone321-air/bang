@@ -253,4 +253,13 @@
       rid = #{rid,jdbcType=INTEGER}
     where urid = #{urid,jdbcType=INTEGER}
   </update>
+  
+  <!-- saveSome批量新增 -->
+  <insert id="saveSome" parameterType="java.util.Map">
+  	insert into userrole
+  	values
+  	<foreach collection="giveRids" item="rid" separator=",">
+  		(null,#{uid},#{rid})
+  	</foreach>
+  </insert>
 </mapper>

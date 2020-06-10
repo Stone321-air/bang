@@ -54,5 +54,10 @@ public class UseresServiceImpl implements UseresService {
 		criteria.andUidIn(uidList);
 		useresMapper.deleteByExample(example);
 	}
+	@Override
+	public void update(Useres user) {
+		// TODO Auto-generated method stub
+		useresMapper.updateByPrimaryKeySelective(user);
+	}
 
 }
